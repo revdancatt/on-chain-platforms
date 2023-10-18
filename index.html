@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Floating Chained Platforms</title>
+  <meta charset="utf-8">
+</head>
+
+<body>
+  <canvas id="target"></canvas>
+  <script src="./fxhash.js"></script>
+  <script src="./noise.js"></script>
+  <script src="./index.js"></script>
+  <script>
+    let preloadImagesTmr = null
+    document.addEventListener('DOMContentLoaded', (event) => {
+      preloadImagesTmr = setInterval(() => {
+        preloadImages()
+      }, 333)
+      preloadImages()
+    })
+  </script>
+</body>
+
+</html>
