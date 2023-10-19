@@ -1,4 +1,4 @@
-/* global preloadImagesTmr $fx fxpreview fxhash noise */
+/* global preloadImagesTmr $fx fxpreview noise */
 //
 //  fxhash - Floating Chained Platforms
 //
@@ -1025,8 +1025,8 @@ const autoDownloadCanvas = async () => {
   // Create a download link
   const element = document.createElement('a')
   const filename = 'forceId' in urlParams
-    ? `${prefix}_${urlParams.forceId.toString().padStart(4, '0')}_${fxhash}`
-    : `${prefix}_${fxhash}`
+    ? `${prefix}_${urlParams.forceId.toString().padStart(4, '0')}_${$fx.hash}`
+    : `${prefix}_${$fx.hash}`
   element.setAttribute('download', filename)
 
   // Hide the link element
